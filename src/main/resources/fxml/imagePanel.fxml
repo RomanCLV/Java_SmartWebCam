@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="fxmlController.GridImageController"
+          prefHeight="583" prefWidth="742"
+          hgap="10" vgap="10"
+>
+    <columnConstraints>
+        <ColumnConstraints minWidth="10.0" percentWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="75.0" />
+        <RowConstraints minHeight="10.0" percentHeight="25.0" />
+    </rowConstraints>
+
+    <ImageView fx:id="imageView"
+               fitHeight="450"
+               pickOnBounds="true" preserveRatio="true"
+    />
+
+    <GridPane GridPane.rowIndex="1" hgap="10" vgap="10" >
+        <columnConstraints>
+            <ColumnConstraints minWidth="10.0" percentWidth="33.3" />
+            <ColumnConstraints minWidth="10.0" percentWidth="33.3" />
+            <ColumnConstraints minWidth="10.0" percentWidth="33.3" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="50.0" />
+            <RowConstraints minHeight="10.0" percentHeight="50.0" />
+        </rowConstraints>
+
+        <Text GridPane.rowIndex="0" GridPane.columnIndex="0" text="Description :"/>
+        <Text GridPane.rowIndex="1" GridPane.columnIndex="0" text="Index :"       fx:id="textIndex"  />
+        <Text GridPane.rowIndex="1" GridPane.columnIndex="1" text="Object :"      fx:id="textObject" />
+        <Text GridPane.rowIndex="1" GridPane.columnIndex="2" text="Probability :" fx:id="textProbability" />
+    </GridPane>
+</GridPane>

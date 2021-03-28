@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+mainClassName = 'launcher.Launcher'
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "15.0.1"
+    modules = [ 'javafx.controls','javafx.swing','javafx.fxml' ]
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.tensorflow', name: 'tensorflow', version: '1.15.0'
+    compile group: 'org.openjfx', name: 'javafx-fxml', version: '15.0.1'
+    compile group: 'org.controlsfx', name: 'controlsfx', version: '11.0.3'
+    implementation group: 'org.bytedeco', name: 'javacv-platform', version: '1.5.4'
+    implementation 'com.github.sarxos:webcam-capture:0.3.12'
+}
